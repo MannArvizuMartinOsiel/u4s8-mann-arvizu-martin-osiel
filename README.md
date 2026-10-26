@@ -1,115 +1,95 @@
-# Proyecto Web — Práctica 8
+# Práctica 8 — Deployment final y defensa oral en vivo
 
 ## Descripción del proyecto
 
-Aplicación web desarrollada con Django que permite a los usuarios administrar sus servicios registrados. Incluye funcionalidades para consultar, crear, editar, eliminar y buscar servicios, con acceso mediante autenticación de usuarios.
+Aplicación web desarrollada con Django que permite administrar servicios mediante operaciones de consulta, creación, edición, eliminación y búsqueda. El proyecto utiliza autenticación de usuarios y una base de datos MySQL.
 
-Este proyecto corresponde a la entrega final de la Unidad 4, Semana 8: Deployment final y defensa oral en vivo.
+Esta entrega corresponde a la Unidad 4, Semana 8, de la asignatura Aplicaciones Web. Su objetivo es publicar la versión final de la aplicación, comprobar su funcionamiento y preparar la defensa oral.
+
+## Portafolio académico
+
+- **Portafolio completo:** https://portafolio-moma-evtx.onrender.com/
+- **Proyecto integrador en vivo — INE Personal MOMA:** https://u4s7-mann-arvizu-martin-osiel.onrender.com/
 
 ## Tecnologías utilizadas
 
-- **Python:** lenguaje de programación.
-- **Django:** framework para el desarrollo web.
-- **MySQL:** sistema gestor de base de datos.
-- **Aiven:** servicio de base de datos MySQL en la nube.
-- **Tailwind CSS:** estilos y diseño de la interfaz.
-- **Gunicorn:** servidor de aplicaciones para producción.
-- **Render:** plataforma de despliegue.
-- **Git y GitHub:** control de versiones y almacenamiento del código fuente.
+- Python
+- Django
+- MySQL en la nube mediante Aiven
+- Tailwind CSS
+- Gunicorn
+- Render
+- Git y GitHub
 
-## Funcionalidades
+## Funcionalidades principales
 
 - Registro e inicio de sesión de usuarios.
 - Consulta de servicios registrados.
-- Creación de nuevos servicios.
-- Edición de servicios existentes.
-- Eliminación de servicios.
+- Creación, edición y eliminación de servicios.
 - Búsqueda de servicios por título.
 - Paginación de resultados.
-- Separación de los servicios según el usuario autenticado.
+- Acceso a funciones protegidas mediante autenticación.
 
-## Aplicación desplegada
+## Base de datos y despliegue
 
-**URL de producción:** [AGREGAR AQUÍ LA URL DE RENDER]
+La aplicación utiliza MySQL mediante Aiven. Las credenciales de conexión y demás configuraciones sensibles deben gestionarse mediante variables de entorno.
 
-## Requisitos para ejecutar el proyecto localmente
+El despliegue se realiza en Render, donde se instalan las dependencias, se recopilan los archivos estáticos y se ejecutan las migraciones de Django.
 
-- Python instalado.
-- Git instalado.
-- Acceso a una base de datos MySQL.
-- Archivo `requirements.txt` con las dependencias del proyecto.
+- **Portafolio publicado:** https://portafolio-moma-evtx.onrender.com/
+- **Aplicación de la Práctica 8:** https://u4s8-mann-arvizu-martin-osiel.onrender.com/
+- **Repositorio de la Semana 7:** https://github.com/MannArvizuMartinOsiel/u4s7-Mann-Arvizu-Martin-Osiel
+- **Repositorio de la Semana 8:** https://github.com/MannArvizuMartinOsiel/u4s8-mann-arvizu-martin-osiel
 
-## Instalación local
+## Pruebas de funcionamiento
 
-1. Clonar el repositorio:
+- Verificar que la aplicación abra mediante HTTPS.
+- Comprobar el inicio de sesión y el acceso a las páginas protegidas.
+- Crear, consultar, editar y eliminar servicios.
+- Verificar la búsqueda y la paginación.
+- Comprobar que cada usuario solo pueda consultar sus propios servicios.
+- Confirmar que los datos se conserven en la base de datos de producción.
 
-   ```bash
-   git clone URL_DEL_REPOSITORIO
-   ```
+## Versión final
 
-2. Entrar en la carpeta del proyecto:
+La entrega final se identifica con la etiqueta de Git `v1.0` y su correspondiente publicación en GitHub Releases.
 
-   ```bash
-   cd NOMBRE_DE_LA_CARPETA
-   ```
+**Enlace del Release:** AGREGAR URL DEL RELEASE `v1.0` CUANDO ESTÉ PUBLICADO.
 
-3. Crear y activar un entorno virtual.
+## Historial de unidades y entregas
 
-   En Windows:
+### Unidad 1 — Portafolio estático (HTML + Tailwind)
 
-   ```powershell
-   python -m venv venv
-   .\venv\Scripts\Activate.ps1
-   ```
+- [Práctica 1 — Código en GitHub](https://github.com/MannArvizuMartinOsiel)
+- [Práctica 2 — Código en GitHub](https://github.com/MannArvizuMartinOsiel)
+- [Práctica 2 — Sitio en Render](https://ine-personal-moma.onrender.com/)
 
-4. Instalar las dependencias:
+### Unidad 2 — App Django + MySQL en Render
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+- [Código de la Unidad 2 en GitHub](https://github.com/MannArvizuMartinOsiel)
 
-5. Configurar las variables de entorno necesarias para Django y la conexión a MySQL.
+*El portafolio marca el sitio de Render de esta unidad como pendiente.*
 
-6. Aplicar las migraciones:
+### Unidad 3 — Gestión de servicios (Django)
 
-   ```bash
-   python manage.py migrate
-   ```
+- [Código de la práctica U3S5 en GitHub](https://github.com/MannArvizuMartinOsiel)
+- [Sitio de la práctica U3S5 en Render](https://u3s5-mannarvizu-martiosiel.onrender.com/)
+- [Código de la práctica U3S6 en GitHub](https://github.com/MannArvizuMartinOsiel)
+- [Sitio de la práctica U3S6 en Render](https://u3s6-mann-arvizu-martinosiel.onrender.com/)
 
-7. Iniciar el servidor local:
+### Unidad 4 — Proyecto integrador final
 
-   ```bash
-   python manage.py runserver
-   ```
+- [Práctica 1 — Código en GitHub](https://github.com/MannArvizuMartinOsiel)
+- [Práctica 1 — Sitio en Render](https://u4s7-mann-arvizu-martin-osiel.onrender.com/)
+- [Práctica 2 — Código en GitHub](https://github.com/MannArvizuMartinOsiel)
+- [Práctica 2 — Sitio en Render](https://u4s8-mann-arvizu-martin-osiel.onrender.com/)
 
-8. Abrir `http://127.0.0.1:8000/` en el navegador.
+## Datos académicos
 
-## Base de datos
-
-El proyecto utiliza MySQL mediante Aiven. Las credenciales y los datos de conexión se configuran mediante variables de entorno para evitar incluir información sensible en el repositorio.
-
-## Seguridad y aislamiento de usuarios
-
-La aplicación requiere autenticación para acceder a las funciones protegidas. El aislamiento de usuarios debe comprobarse iniciando sesión con dos cuentas diferentes y verificando que cada una pueda consultar y administrar únicamente los servicios que le corresponden.
-
-## Despliegue
-
-La aplicación se publica en Render utilizando Gunicorn. Durante el proceso de despliegue se instalan las dependencias, se recopilan los archivos estáticos y se aplican las migraciones de la base de datos.
-
-Las variables de entorno se configuran desde el panel de Render.
-
-## Historial de trabajo
-
-- **Semana 7:** desarrollo y pruebas de la aplicación web.
-- **Semana 8:** preparación de la entrega final, despliegue en producción, pruebas de funcionamiento y publicación de la versión final `v1.0`.
-
-## Autor
-
-**Nombre:** Martin Osiel Mann Arvizu
-
-**Asignatura:** Aplicación Web
-
-**Actividad:** Unidad 4 — Semana 8
-
-**Entrega:** Deployment final y defensa oral en vivo
-
+- **Asignatura:** Aplicaciones Web
+- **Unidad:** Unidad 4
+- **Actividad:** Práctica 8
+- **Tema:** Deployment final y defensa oral en vivo
+- **Autor:** Martin Osiel Mann Arvizu
+- **Institución:** Universidad Tecnológica de Hermosillo
+- **Grupo:** 4-1
